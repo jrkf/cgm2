@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "dockerfileLines": [
-    "FROM node:8.9.1",
+    "FROM node:8.11.1",
     "MAINTAINER Nightscout Contributors",
     "RUN apt-get update && \\",
     "  apt-get -y dist-upgrade",
@@ -11,7 +11,7 @@
     "RUN npm install && \\",
     "  npm run postinstall && \\",
     "  npm run env",
-    "EXPOSE 1337",
+    "EXPOSE 80",
     "CMD [\"node\", \"server.js\"]"
   ]
 }
