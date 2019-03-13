@@ -8,6 +8,7 @@
     "RUN mkdir -p /opt/app",
     "ADD . /opt/app",
     "WORKDIR /opt/app",
+    "RUN rm -rf /opt/app/*",
     "RUN git clone git://github.com/nightscout/cgm-remote-monitor.git /opt/app",
     "RUN npm install && \\",
     "npm run postinstall && \\",
